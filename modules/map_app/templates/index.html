@@ -132,7 +132,7 @@
                     }
                 });
             </script>
-            <h2>For selection by gage id please use the cli.</h2>
+            <h2>Copy the command below and run it locally</h2>
         </section>
         <section id="basins-container">
             <h2>Selected Basins</h2>
@@ -159,50 +159,7 @@
                 <input type="datetime-local" id="end-time" name="end-time" value="2010-01-02T00:00">
             </div>
         </section>
-
-        <section id="forcings">
-            <div id="forcings-warning">
-                <strong>Forcing generation may take a while.<br> Use the Cli for progress bars and additional information</strong>
-            </div>
-            <!-- div below to show source data toggle -->
-            <div style="display: flex; justify-content: left;">
-                <div class="toggle-switch">
-                    <input type="checkbox" id="datasource-toggle" class="toggle-input">
-                    <label for="datasource-toggle" class="toggle-label">
-                        <span class="toggle-text toggle-text-left">NWM</span>
-                        <span class="toggle-text toggle-text-right">AORC</span>
-                        <span class="toggle-handle"></span>
-                    </label>
-                </div>
-                <button id="forcings-button">Create Forcing From Zarrs</button>
-                <img class="loading" src="{{ url_for('static', filename='resources/loading.gif') }}" alt="Loading"
-                    id="forcings-loading">
-                <br>
-            </div>
-            <br>
-            <div id="forcings-output-path"></div>
-            <div id="progress">
-                <div id="bar"></div>
-                <div id="bar-text"></div>
-            </div>
-        </section>
-
-        <section id="realization">
-            <button id="realization-button">Create Realization</button>
-            <div id="realization-output-path"></div>
-        </section>
-
-
     </main>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/console.css') }}">
-    <div id="console" class="minimized">
-        <div class="center">
-            <button id="toggleConsole">Show Console</button>
-        </div>
-        <div id="logOutput"></div>
-    </div>
-    <script src="{{ url_for('static', filename='js/console.js') }}"></script>
-    <script type="module" src="{{ url_for('static', filename='js/data_processing.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js' ) }}"></script>
 
 </body>
